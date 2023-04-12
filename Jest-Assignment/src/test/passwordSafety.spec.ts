@@ -26,13 +26,13 @@ describe("passwordSafety", () => {
   });
 
   it("Case 5: Password does not contain at least 1 special character", () => {
-    expect(passwordSafety("PPPPPPPP1a")).toStrictEqual(
+    expect(passwordSafety("PPPPPPPp1")).toStrictEqual(
       "Password should contain at least 1 special character"
     );
   });
 
   it("Case 6: Password is safe (a little bit)", () => {
-    expect(passwordSafety("PPPPPPPP1a!")).toStrictEqual(
+    expect(passwordSafety("PPPPPPp1@")).toStrictEqual(
       "Password is safe (a little bit)"
     );
   });
