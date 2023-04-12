@@ -7,5 +7,33 @@ describe("passwordSafety", () => {
     );
   });
 
-  //...
+  it("Case 2: Password does not contain at least 1 number", () => {
+    expect(passwordSafety("pppppppp")).toStrictEqual(
+      "Password should contain at least 1 number"
+    );
+  });
+
+  it("Case 3: Password does not contain at least 1 uppercase character", () => {
+    expect(passwordSafety("pppppppp1")).toStrictEqual(
+      "Password should contain at least 1 uppercase character"
+    );
+  });
+
+  it("Case 4: Password does not contain at least 1 lowercase character", () => {
+    expect(passwordSafety("PPPPPPPP1")).toStrictEqual(
+      "Password should contain at least 1 lowercase character"
+    );
+  });
+
+  it("Case 5: Password does not contain at least 1 special character", () => {
+    expect(passwordSafety("PPPPPPPp1")).toStrictEqual(
+      "Password should contain at least 1 special character"
+    );
+  });
+
+  it("Case 6: Password is safe (a little bit)", () => {
+    expect(passwordSafety("PPPPPPp1@")).toStrictEqual(
+      "Password is safe (a little bit)"
+    );
+  });
 });
