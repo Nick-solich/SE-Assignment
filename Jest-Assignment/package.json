@@ -50,7 +50,6 @@
       "text",
       "html"
     ],
-    "coverageDirectory": "<rootDir>/coverage/",
-    "verbose": true
+    "coverageDirectory": "<rootDir>/coverage/"
   }
 }
